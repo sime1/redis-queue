@@ -1,0 +1,24 @@
+{
+  "author": {
+    "email": "sime.pizzi@gmail.com",
+    "name": "sime1"
+  },
+  "scripts": {
+    "test": "mocha ./test/test.js",
+    "sample": "node ./bin/create-requests.js -f ./sample/requests & node ./bin/worker-manager.js -n",
+    "sample-cluster": "node ./bin/create-requests.js -c -p 30001 -f ./sample/requests & node ./bin/worker-manager.js -c -p 30001 -n"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "mocha": "^6.1.4"
+  },
+  "dependencies": {
+    "uuid": "^3.3.2",
+    "commander": "^2.20.0",
+    "ioredis": "^4.10.0"
+  }
+}
